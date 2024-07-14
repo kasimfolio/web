@@ -1,0 +1,430 @@
+/* Import the Nunito Sans font */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #FEF6F0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #A94DFF, #BEC4FF, #FE92A7);
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7F7F7F;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    color: #7F7F7F;
+}
+
+.nav-links li::after {
+    content: '';
+    height: 20px;
+    width: 1px;
+    background: white;
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links li:last-child::after {
+    display: none;
+}
+p {
+    font-size: 1.2em;
+    color: #404040;
+}
+h3{
+    color: #404040;
+    font: 1.4em; ;
+}
+
+section{
+    padding-top: 5vh;
+}
+h2 {
+    color: #AB46FF;
+    letter-spacing: 3px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    z-index: 10;
+    margin: 0; /* Remove margin to avoid misalignment */
+    width: fit-content;
+    font-size: 1.8em;
+}
+
+.container {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+}
+
+.header-line-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.line {
+    flex-grow: 1; /* Allow the line to take up available space */
+    height: 5px; /* Adjust the thickness of the line */
+    background: linear-gradient(to right, #A94DFF, #BEC4FF, #FE92A7);
+}
+
+.circle {
+    width: 10px; /* Adjust the size of the circle */
+    height: 10px; /* Adjust the size of the circle */
+    background-color: #FE92A7;
+    border-radius: 50%;
+    margin-left: 10px; /* Space between the line and the circle */
+}
+.endbox{
+    content: '';
+    justify-content: end;
+    width: 25vw;
+    background-color: #AB46FF;
+}
+
+.slide-container {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.slide {
+    flex: 1;
+    padding-right: 20px; /* Add some space between the image and description */
+}
+.slide-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.slideimg {
+    height: 500px;
+    width: auto;
+    padding-left: 60px;
+    padding-right: 20px; /* Add some space between the image and description */
+}
+
+.description {
+    margin-right: 150px;
+}
+.description h3 {
+    margin-top: 0; /* Remove default margin if necessary */
+    font-size: 2em;
+}
+
+.description p {
+    margin-bottom: 0.5em; /* Add some spacing between paragraphs */
+    font-size: 1.2em;
+}
+.cutline {
+    height: 1.5px;
+    width: 65vw;
+    background: linear-gradient(to right, #A94DFF, #BEC4FF, #FE92A7);
+    margin-left: 80px;
+}   
+.flyertext{
+    padding-left: 80px;
+    margin: 0;
+}
+.flyercontainer {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex; /* Use flexbox to align images */
+    justify-content: space-around; /* Adjust alignment as needed */
+    align-items: center; /* Vertically center the images */
+    flex-wrap: nowrap; /* Prevent wrapping of the images */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.flyershade {
+    flex: 0 1 30%; /* Allow the container to shrink and grow appropriately */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    max-width: calc(33.33% - 40px); /* Adjust for padding */
+    height: auto;
+}
+
+.flyershade img {
+    max-height: 460px; /* Set maximum height */
+    width: 100%; /* Make image width fill its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image fits within the container */
+}
+.carouseltext{
+    padding-left: 80px;
+    margin: 0;
+    font-weight: bold;
+}
+.carouselcontainera {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: inline-flex; /* Use flexbox to align images */
+    justify-content: space-around; /* Adjust alignment as needed */
+    align-items: center; /* Vertically center the images */
+    flex-wrap: nowrap; /* Prevent wrapping of the images */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.carouselshade {
+    flex: 0 1 30%; /* Allow the container to shrink and grow appropriately */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    max-width: calc(33.33% - 40px); /* Adjust for padding */
+    height: auto;
+}
+
+.carouselshade img {
+    max-height: 460px; /* Set maximum height */
+    width: 100%; /* Make image width fill its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image fits within the container */
+    border-radius: 5px;
+}
+.spacer{
+   padding: 1rem;
+}
+
+
+.toprow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38vh;
+    background-color: #FEF6F0;
+    margin: 0;
+    gap: 60px; /* Adjust the gap as needed */
+}
+
+.cardgrad {
+    background: linear-gradient(255deg,#FD93A7, #AA4BFF);
+    border-radius: 22px;
+    padding: 4px; /* Optional padding for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #FEF6F0;
+    padding: 25px;
+    width: 328px;
+    height: 130px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 18px;
+    margin: 0px;
+}
+
+.card .icon {
+    background: linear-gradient(255deg, #AA4BFF, #FD93A7);
+    border-radius: 50%;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #FEF6F0;
+}
+
+.card .icon img {
+    width: 70%;
+    height: auto;
+}
+
+.card .contentE h2 {
+    color: #ff4081;
+    margin: 0px;
+    padding-top: 18px;
+    font-size: 25px;
+    letter-spacing: normal;
+}
+
+.card .contentE p {
+    color: #404040;
+    margin: 0px;
+}
+.Aboutbody{
+    margin: 0px;
+    height: 77vh;
+    width: auto;
+    padding-left: 120px;
+    position: relative;
+}
+.aboutleft{
+width: 45vw;
+height: 100%;
+display: inline-flex;
+position: relative;
+margin-top: 4vh;
+}
+.aboutright{
+    width: 40vw;
+    height: 100%;
+    display: inline-flex;
+    position: relative;
+    z-index: 10;
+}
+.name{
+    position: absolute;
+}
+#smalltext{
+    font-size: 3vh;
+    color: #404040;
+    padding: 1vh;
+    padding-left: 0;
+}
+#nametext{
+    color: #AA4BFF;
+    font-weight: bold;
+    font-size: 10vh;
+    padding: .5vh;
+    padding-left: 0px;
+}
+#subtext{
+    font-size: 4vh;
+    color: #404040;
+    padding: .5vh;
+    padding-left: 0px;
+}
+#redbold{
+    font-weight: bold;
+    color: #ff4081;
+}
+.bottombg {
+    width: 100%;
+    height: 20vh;
+    background-color: #F0BED6;
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+    position: relative;
+    bottom: 17.5vh;
+    margin: 0;
+}
+.imagecontainer{
+    border: #AA4BFF;
+    border-width: 2px;
+}
+#DPD{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.contact-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    align-self: center;
+    padding-left: 2vw;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #404040; /* Adjust the color as needed */
+    margin-right: 15px;
+    font-size: 3vh;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #404040; /* Adjust the color as needed */
+}
+
+.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: #5a5a5a; /* Adjust the color as needed */
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover::after {
+    transform: scaleX(1);
+}
+
+.contact-link img {
+    margin-right: 8px;
+    width: auto; /* Adjust size as needed */
+    height: 22px; /* Adjust size as needed */
+}
+
+.separatorcon {
+    background-color: #404040; /* Adjust the color as needed */
+    margin-right: 15px;
+    width: 1px;
+    height: 25px;
+}
+
+.contact {
+    color: #404040;
+    font-weight: bold;
+    font-size: 4vh;
+    padding-left: 0;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
